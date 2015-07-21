@@ -1,0 +1,23 @@
+create table public.customer (cid BIGINT PRIMARY KEY,cname VARCHAR(30) NOT NULL);
+
+CREATE SEQUENCE PUBLIC.cid_nextval
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1;
+
+create table public.book (bid IDENTITY, bname VARCHAR(30) NOT NULL);
+
+
+INSERT INTO public.customer VALUES (NEXT VALUE FOR PUBLIC.cid_nextval,'sriram');
+
+select * from public.BOOK;
+select * from public.CUSTOMER;
+
+--select next_value from PUBLIC.sequences where sequence_name = upper(cid_nextval)
+
+--select * from  PUBLIC.customer;
+
+--call NEXT VALUE FOR PUBLIC.cid_nextval;
+
+--drop table public.book;
+
